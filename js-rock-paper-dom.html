@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS functions with obj</title>
+    <link rel="stylesheet" href="Style/js-rock-paper.css" />
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+
+    <button
+      onclick="
+        
+        playGame('Rock');
+   
+    "
+      class="option-btn"
+    >
+      <img src="Resource/rock-emoji.svg" class="move-img" alt="rock image" />
+    </button>
+    <button
+      onclick="
+
+        playGame('Paper');
+
+    "
+      class="option-btn"
+    >
+      <img src="Resource/paper-emoji.svg" class="move-img" alt="" />
+    </button>
+    <button
+      onclick="
+
+        playGame('Scissors');
+
+    "
+      class="option-btn"
+    >
+      <img src="Resource/Scissors-emoji.svg" class="move-img" alt="" />
+    </button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button
+      onclick="
+    
+        score.loss=0;
+        score.ties=0;
+        score.wins=0;
+
+        localStorage.removeItem('score');
+        updateScoreElement();
+        document.querySelector('.js-result').innerHTML ='';
+        document.querySelector('.js-moves').innerHTML= '';
+    "
+    class ="reset-score-btn"
+    >
+      Rest Score
+    </button>
+
+    <script src="Scripts/js-rock-paper-dom.js"></script>
+  </body>
+</html>
